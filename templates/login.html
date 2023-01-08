@@ -1,0 +1,101 @@
+{% extends "login_base.html" %}
+
+
+
+
+{% block title %}Login{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Section: Design Block -->
+
+
+
+<section class=" text-center text-lg-start">
+  <style>
+    .rounded-t-5 {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .rounded-tr-lg-0 {
+        border-top-right-radius: 0;
+      }
+
+      .rounded-bl-lg-5 {
+        border-bottom-left-radius: 0.5rem;
+      }
+
+			.vert{
+				vertical-align: middle;
+				background-color: #d1a504;
+				padding: 50px;
+			}
+
+			.form_back{
+				background-color:white;
+			}
+
+			.background{
+				padding-top:125px;
+			}
+
+			.center {
+  			margin-left: auto;
+  			margin-right: auto;
+			}
+
+    }
+  </style>
+
+<div class = "background">
+  <div class="card mb-3 vert">
+    <div class="row g-0 d-flex align-items-center form_back">
+      <div class="col-lg-4 d-none d-lg-flex ">
+        <img src="/static/big_logo.png" alt="Trendy Pants and Shoes"
+          class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+      </div>
+      <div class="col-lg-8 form_back">
+        <div class="card-body py-5 px-md-5 form_back">
+
+          <form action="{{url_for('home')}}" method= "post" >
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="username" name="username" class="form-control" />
+              <label class="form-label" for="username">Username</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="password" name="password" class="form-control" />
+              <label class="form-label" for="password">Password</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+
+
+              <div class="col" style="padding-bottom:15px; padding-top:-5px;">
+                <!-- Simple link -->
+                <a href="home">Create New Account</a>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4"> Sign in </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Section: Design Block -->
+
+
+{% endblock %}

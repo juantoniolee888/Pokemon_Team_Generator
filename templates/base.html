@@ -7,10 +7,9 @@
   			display: block;
   			margin-left: auto;
   			margin-right: auto;
-  			width: 50%;
 			}
 			#section1 {padding-bottom:50px;}
-			#section2 {padding-top:100px;height:1000px;color: #fff; background-color: #1E88E5;}
+			#section2 {padding-top:100px; padding-bottom:50px; height:800px;color: #fff; background-color: #1E88E5;}
 		</style>
 
 		{% block head %}
@@ -25,9 +24,9 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color: #1d67ab;">
   	<div class="container">
-    	<a class="navbar-brand" href="#">
-      	<img src="/static/pokeball.png"  alt="..." height="36" width="36">
-				Pokemon Team Creator
+    	<a class="navbar-brand" href="{{url_for('user_home', username=username)}}">
+      	<img src="/static/champion.png"  alt="..." height="36" width="36">
+				PokeTeam
     	</a>
     	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       	<span class="navbar-toggler-icon"></span>
@@ -46,7 +45,7 @@
           		Dropdown link
         		</a>
         		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          		<a class="dropdown-item" href="#">Action</a>
+          		<a class="dropdown-item" href="/">Action</a>
           		<a class="dropdown-item" href="#">Another action</a>
           		<a class="dropdown-item" href="#">Something else here</a>
         		</div>
@@ -57,7 +56,7 @@
 	</nav>
 
 	<div>
-  	<img src="/static/pokemon.png" class="center">
+  	<img src="/static/logo.png" class="center" width='500'>
 	</div>
 
 
