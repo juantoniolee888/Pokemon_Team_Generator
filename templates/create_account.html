@@ -1,0 +1,30 @@
+{% extends "form_base.html" %}
+
+
+
+
+{% block title %}Account Creation{% endblock %}
+
+
+
+{% block content %}
+<div style='color: white;'>
+	<form class='center text-center' style='background-color: #1d67ab; padding: 50px; border: #d1a504;' action = {{url_for('check')}} method = 'POST'>
+		<div class="form-group">
+    	<label for="Trainer Name" >Trainer Name</label>
+    	<input type="text" name="trainer" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Trainer">
+  	</div>
+
+  	<div class="form-group">
+    	<label for="username" >Username</label>
+    	<input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+  	</div>
+  	<div class="form-group">
+    	<label for="password">Password</label>
+    	<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+  	</div>
+  	  	<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+{% endblock %}
